@@ -1,0 +1,31 @@
+https://classroom.google.com/c/NTI3MTI2NzE2MjEy/m/NTI3MTY4MjQ1Njc2/details
+
+HELENIUM______________________________________________
+login: matvejslobodin
+
+Password: ThisIsUtyf
+
+Host: students.a-level.com.ua
+
+ssh matvejslobodin@students.a-level.com.ua
+_________________________________________________________________________
+
+create resume
+https://careers.easternpeak.com/blog/how-to-create-good-cv-for-programmers/
+
+POSTGRES________________________________________________________________---------
+pasword DB: u5R1ce5x8nug
+HOST: 5432
+
+Rus LANGUAGE IN POSTGRES: psql \! chcp 1251
+
+Dump DB: pg_dump -Fc -v --host=localhost --username=postgres --dbname=films_db -f films_db.dump
+
+Restore db: pg_restore -d films_db -h localhost -U postgres films_db.dump
+
+select p1.name as grandfather, p2.name as father, p3.name as son, p4.name as grandson from people p1 inner join people p2 on(p1.id = p2.pid) inner join people p3 on(p2.id = p3.pid) inner join people p4 on(p3.id = p4.pid);
+_________________________________
+
+pytest__________________
+https://github.com/natenka/pyneng-book/blob/master/docs/source/book/additional_info/pytest_basics.rst
+https://habr.com/ru/post/448782/

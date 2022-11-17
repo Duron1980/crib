@@ -1,0 +1,35 @@
+alСоздание внешнего ключа в существующей таблице
+Использование Transact-SQL
+
+В следующем примере создается внешний ключ для столбца TempID, ссылающегося на столбец SalesReasonID в таблице Sales.SalesReason базы данных AdventureWorks.
+SQL
+
+ALTER TABLE Sales.TempSalesReason
+   ADD CONSTRAINT FK_TempSales_SalesReason FOREIGN KEY (TempID)
+      REFERENCES Sales.SalesReason (SalesReasonID)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE
+
+_______________________________
+Объединение двух таблиц в третью
+https://site-do.ru/db/sql6.php
+
+SELECT имя_таблицы_1.имя_столбца1_таблицы_1,
+            имя_таблицы_1.имя_столбца2_таблицы_1,
+            имя_таблицы_2.имя_столбца1_таблицы_2,
+            имя_таблицы_2.имя_столбца2_таблицы_2
+     FROM
+            имя_таблицы_1, имя_таблицы_2
+     WHERE 
+            имя_таблицы_1.имя_столбца_по_которому_объединяем =
+            имя_таблицы_2.имя_столбца_по_которому_объединяем;
+
+____________________________
+Перенос данных одного столбца таблици в другую таблицу
+update job_listing as jl inner join job_current as jc
+on jl.job_id = jc.contact_id
+set jl.salary = jc.salary;
+;
+
+
+
